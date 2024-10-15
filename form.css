@@ -1,0 +1,187 @@
+/* Basic styles for layout */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+    background-color: beige;
+}
+
+.left-column {
+    border: 2px solid aliceblue;
+    border-radius: 8px;
+    margin: 30px;
+    width: 45%;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(168, 145, 116);
+    box-shadow: 0 12px 10px rgb(77, 83, 88);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form input[type="email"],
+.form input[type="password"] {
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.form input[type="email"]:focus,
+.form input[type="password"]:focus {
+    border: 2px solid #555;
+    background-color: #f9f9f9;
+}
+
+button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.signin-btn {
+    background-color: #333;
+    color: white;
+}
+
+.signin-btn:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.google-btn {
+    background-color: #f4f4f4;
+    color: #555;
+}
+
+.google-btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+.welcome-title{
+    font-weight: bold;
+}
+.forgot, .sign a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.right-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    position: relative;
+    border-radius: 8px;
+    background-image: url('./kapic.jpeg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
+    margin: 30px;
+}
+
+/* Styling for the testimonial box */
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 15px;
+    text-align: center;
+    max-width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonial p.test {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.developer-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}
+
+.developer-info h4, .developer-info p {
+    margin: 0;
+    padding-right: 10px;
+}
+
+.developer-info .star {
+    font-size: 18px;
+    color: gold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .right-column {
+        height: 300px;
+    }
+
+    .testimonial {
+        max-width: 90%;
+    }
+
+    .developer-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
